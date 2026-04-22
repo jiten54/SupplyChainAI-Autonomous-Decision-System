@@ -1,0 +1,6 @@
+{
+  "name": "OptiFlow RL: Inventory Optimizer",
+  "description": "Production-grade supply chain optimization system using Reinforcement Learning (Q-Learning & DQN) to minimize holding costs and stockouts through intelligent reordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["Reinforcement Learning", "Supply Chain Simulation", "Demand Forecasting"]
+}

@@ -21,96 +21,123 @@ A production-grade supply chain optimization system leveraging **Deep Reinforcem
 - **Frontend**: React 18, Tailwind CSS (Sleek Interface), Framer Motion.
 - **Viz**: Recharts (Composed Multi-Axis Charts).
 
-🚀 SupplyChainAI
-Autonomous Demand Forecasting & Inventory Optimization System
-🧠 Overview
+# 🚀 SupplyChainAI
 
-SupplyChainAI is a production-grade AI system designed to simulate and optimize modern supply chain operations. It combines time-series demand forecasting with Deep Reinforcement Learning (DQN) to enable intelligent, automated inventory decisions.
+### Autonomous Decision Intelligence for Supply Chain Optimization
 
-The system is built to replicate real-world quick-commerce environments, focusing on cost efficiency, service reliability, and scalable decision-making.
+## 📌 Overview
 
-🎯 Core Objective
+SupplyChainAI is an end-to-end AI system that integrates demand forecasting with Deep Reinforcement Learning (DQN) to automate inventory decisions in dynamic supply chain environments.
 
-Transform supply chain operations from static rule-based systems → adaptive AI-driven decision systems
+The system moves beyond static rule-based methods and enables adaptive, data-driven decision-making for modern quick-commerce and retail operations.
 
-🧩 System Flow
-┌──────────────────────┐
-│   Demand Data Input  │
-└─────────┬────────────┘
-          ↓
-┌──────────────────────┐
-│ Feature Engineering  │
-└─────────┬────────────┘
-          ↓
-┌──────────────────────┐
-│ Forecasting Models   │
-│ (SARIMA / Prophet / XGBoost)
-└─────────┬────────────┘
-          ↓
-┌──────────────────────┐
-│ Demand Predictions   │
-└─────────┬────────────┘
-          ↓
-┌──────────────────────┐
-│ Deep RL Agent (DQN)  │
-└─────────┬────────────┘
-          ↓
-┌──────────────────────┐
-│ Inventory Decisions  │
-│ (When & How Much)    │
-└─────────┬────────────┘
-          ↓
-┌──────────────────────┐
-│ API Layer            │
-└─────────┬────────────┘
-          ↓
-┌──────────────────────┐
-│ Interactive Dashboard│
-└──────────────────────┘
-⚙️ Key Components
-📊 Demand Forecasting
-Multi-model ensemble: SARIMA, Prophet, XGBoost
-Multi-SKU, multi-store forecasting
-Feature engineering:
-Lag features (7, 14, 30 days)
-Rolling statistics
-Seasonal & promotional signals
-🧠 Deep Reinforcement Learning
-Deep Q-Network (DQN) with neural approximation
-Experience replay & target network
-State includes:
-Inventory level
-Forecasted demand
-Time dynamics
-📦 Inventory Optimization
-Dynamic decision system:
-Reorder timing
-Order quantity
-Cost-aware optimization:
-Holding cost
-Stockout penalty
-Ordering cost
-🌐 Full-Stack System
-Backend: Node.js (API layer)
-Frontend: React + Tailwind + Recharts
-Dashboard capabilities:
-Demand visualization
-Inventory trajectory
-Model benchmarking
-🔍 Explainability
-Q-value based decision transparency
-Action confidence visualization
-Interpretable RL behavior
-📊 Performance Metrics
-Model	Total Cost (₹)	Service Level (%)	Stockouts
-Fixed Policy	18,000	88%	High
-EOQ	16,200	92%	Medium
-Q-Learning	13,500	95%	Low
-DQN (AI)	12,500	99%	Minimal
-Forecast accuracy improved (MAPE: 22% → 18%)
-~20–25% reduction in inventory cost
-Significant improvement in service level
-📁 Project Structure
+---
+
+## 🎯 Objective
+
+* Predict future demand accurately
+* Optimize inventory decisions in real time
+* Minimize operational costs
+* Improve service levels
+
+---
+
+## ⚙️ System Workflow
+
+```
+Demand Data
+   ↓
+Feature Engineering
+   ↓
+Forecasting Models (SARIMA / Prophet / XGBoost)
+   ↓
+Demand Predictions
+   ↓
+Deep RL Agent (DQN)
+   ↓
+Inventory Decisions (Reorder Quantity)
+   ↓
+API Layer
+   ↓
+Dashboard (Visualization & Insights)
+```
+
+---
+
+## 🧠 Core Components
+
+### 1. Demand Forecasting
+
+* Multi-model ensemble: SARIMA, Prophet, XGBoost
+* Multi-SKU and multi-store forecasting
+* Feature engineering:
+
+  * Lag features (7, 14, 30 days)
+  * Rolling statistics
+  * Seasonal and promotional signals
+
+---
+
+### 2. Deep Reinforcement Learning (DQN)
+
+* Neural network-based Q-learning
+* Experience replay and target network
+* State includes:
+
+  * Inventory level
+  * Forecasted demand
+  * Time step
+
+---
+
+### 3. Inventory Optimization
+
+* Dynamic reorder decisions (when and how much to order)
+* Cost modeling:
+
+  * Holding cost
+  * Stockout penalty
+  * Ordering cost
+
+---
+
+### 4. Full-Stack Application
+
+* Backend: Node.js (API layer)
+* Frontend: React, Tailwind CSS, Recharts
+* Features:
+
+  * Demand visualization
+  * Inventory tracking
+  * Model comparison
+
+---
+
+### 5. Explainability
+
+* Q-value visualization for decisions
+* Transparent reasoning behind actions
+
+---
+
+## 📊 Results
+
+| Model        | Total Cost (₹) | Service Level (%) | Stockouts |
+| ------------ | -------------- | ----------------- | --------- |
+| Fixed Policy | 18,000         | 88%               | High      |
+| EOQ          | 16,200         | 92%               | Medium    |
+| Q-Learning   | 13,500         | 95%               | Low       |
+| DQN          | 12,500         | 99%               | Minimal   |
+
+* Forecast accuracy improved (MAPE: 22% → 18%)
+* ~20–25% reduction in inventory cost
+* Improved service level under dynamic demand
+
+---
+
+## 📁 Project Structure
+
+```
 ml_pipeline/
   data_generator.py
   model_engine.py
@@ -128,36 +155,67 @@ frontend/
   src/
 
 README.md
-▶️ Getting Started
-Clone Repository
+```
+
+---
+
+## ▶️ Setup
+
+### Clone Repository
+
+```
 git clone https://github.com/jiten54/SupplyChainAI-Autonomous-Decision-System
 cd SupplyChainAI-Autonomous-Decision-System
-Run ML + RL Pipeline
+```
+
+### Run ML + RL Pipeline
+
+```
 pip install -r requirements.txt
 python train.py
-Start Backend
+```
+
+### Start Backend
+
+```
 npm install
 node server.js
-Run Frontend
+```
+
+### Run Frontend
+
+```
 npm start
-💼 Key Highlights
-End-to-end AI system combining forecasting + reinforcement learning
-Deep Q-Network for adaptive inventory decision-making
-Full-stack architecture with real-time visualization
-Scalable design for multi-SKU, enterprise-level systems
-Demonstrates real-world supply chain optimization use case
-🔮 Future Enhancements
-PPO / Actor-Critic reinforcement learning
-Real-world dataset integration
-Distributed training (Spark / Ray)
-Cloud deployment (AWS / GCP)
-👨‍💻 Author
+```
+
+---
+
+## 💼 Key Highlights
+
+* End-to-end AI system combining forecasting and reinforcement learning
+* Deep Q-Network for adaptive decision-making
+* Full-stack dashboard with real-time insights
+* Scalable architecture for multi-SKU systems
+
+---
+
+## 🔮 Future Work
+
+* PPO / Actor-Critic reinforcement learning
+* Real-world dataset integration
+* Distributed training (Spark / Ray)
+* Cloud deployment (AWS / GCP)
+
+---
+
+## 👨‍💻 Author
 
 Jiten Moni Das
-🔗 LinkedIn: https://www.linkedin.com/in/jiten-moni-das-01b3a032b
+LinkedIn: https://www.linkedin.com/in/jiten-moni-das-01b3a032b
+GitHub: https://github.com/jiten54
 
-💻 GitHub: https://github.com/jiten54
+---
 
-⚡ Final Note
+## ⚡ Final Note
 
-This project represents a shift from predictive analytics to autonomous decision intelligence in supply chain systems
+This project represents a transition from predictive analytics to autonomous decision intelligence in supply chain systems.
